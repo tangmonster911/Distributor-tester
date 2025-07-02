@@ -53,11 +53,13 @@ The micro seconds deduction needs to be updated for your specific hardware. This
 The Below image is the circuit diagram of one of the 2 schmitt triggers I built for the points interface to MCU.
 
 The below two images whos the two measured delays by using two oscilloscope probes measuring the voltage on points itself and voltage at MCU GPIO.
-The input low pass filter with 1nF start having effect at 1k. For 4 piston 6000 rpm of engine means 3000rpm of distributor with 4 pulses per rotation so that is 50hz x 4 = 200hz ( for v8 this will be 400hz) so current 1nF seems good but this could possibly be lowered to 470pF   
+The input low pass filter with 1nF start having effect at 1k. For 4 piston 6000 rpm of engine means 3000rpm of distributor with 4 pulses per rotation so that is 50hz x 4 = 200hz ( for v8 this will be 400hz) so current 1nF seems good but this could possibly be lowered to 470pf.
+
 1)points closing(12v goes from high to low) (19us delay)
 2)points opening((12v goes from low to high) (56us delay)
-![image](https://github.com/user-attachments/assets/e53566c9-9fa6-48b2-8ce8-a940e7ff64ad)
 ![image](https://github.com/user-attachments/assets/b82b5c30-7f15-4ffd-af0a-8d6c1c22f29f)
+![image](https://github.com/user-attachments/assets/e53566c9-9fa6-48b2-8ce8-a940e7ff64ad)
+
 
 
 Speed Measurement:
