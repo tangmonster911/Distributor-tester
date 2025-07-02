@@ -24,16 +24,7 @@ For the distributor driver i used a large 12V dc motor i sourced from an electro
 ![image](https://github.com/user-attachments/assets/13d6d6a0-b40e-453e-b0b2-c9b42efe25d5)
 
 
-
-
-
-The micro seconds deduction needs to be updated for your specific hardware.
-The Below image is the circuit diagram of one of the 2 schmitt triggers i built for the points interface to MCU.
-for my tests I had a 56us delay on points release and 19us delay on points close as measured with oscilloscope.
-
-The 1k pullup resistor is the reason I have difference in delay for closing and opening of points.
-
-![image](https://github.com/user-attachments/assets/1a0a98ae-d4c2-481f-9e5d-3b58170fc05f)
+PCB for interfacing and power:
 
 This is my crude once of board:
 ![image](https://github.com/user-attachments/assets/645505f0-8238-4e27-9d5c-9db93b0ab700)
@@ -41,6 +32,46 @@ This is my crude once of board:
 2 =  5v supply for stm32f411- nucleo
 3 =  schmitt trigger for points with 1k pullup
 4 = schmitt trigger for proximity sensor ( i used a PNP proximity sensor so simply used a 10k pulldown on schmitt trigger input)
+
+12V and 5V circuit:
+
+These are simply 7805 and 7812 regulators with decoupling, nothing special with a 16v ac transformer as power source.
+
+
+
+POINTS interface:
+
+The 1k pullup resistor is the reason I have difference in delay for closing and opening of points.
+![image](https://github.com/user-attachments/assets/1a0a98ae-d4c2-481f-9e5d-3b58170fc05f)
+the file Tina-TI simulation file is included in github
+
+The micro seconds deduction needs to be updated for your specific hardware. This is in stm32f4xx_it.c file
+The Below image is the circuit diagram of one of the 2 schmitt triggers I built for the points interface to MCU.
+
+The below two images whos the two measured delays by using two oscilloscope probes measuring the voltage on points itself and voltage at MCU GPIO.
+The input low pass filter with 1nF start having effect at 1k. For 4 piston 6000 rpm of engine means 3000rpm of distributor with 4 pulses per rotation so that is 50hz x 4 = 200hz ( for v8 this will be 400hz) so current 1nF seems good but this could possibly be lowered to 470pF   
+1)points closing(12v goes from high to low) (19us delay)
+2)points opening((12v goes from low to high) (56us delay)
+![image](https://github.com/user-attachments/assets/e53566c9-9fa6-48b2-8ce8-a940e7ff64ad)
+![image](https://github.com/user-attachments/assets/b82b5c30-7f15-4ffd-af0a-8d6c1c22f29f)
+
+
+Speed Measurement:
+
+![image](https://github.com/user-attachments/assets/a907b33f-bb90-4003-9fa5-493cbf09c9ef)
+
+For the speed measurement I used a pnp style proximity sensor. All proximity sensors will also have a turnon and turnoff delay.
+IT is not possible to measure this easily.
+1) I corrected the deductions for the points.
+2) i inserted a distributor which has it's advance magnets locked out with a pair of cable ties.
+3) with the MCU in debug mode in stm32cubeide I set the distributor speed to a specific speed lets say 500rpm , then take down the microseconds between points and proximity sensor.
+ increase speed to 1000rpm and then measure difference. Calculate what difference should be in us and then find the error difference between the two. Create an excell with a largert sample of say 4 speeds and put down difference and calculate proximity sensor delay. Mine came to 671us. A value that needs to be updated for your hardware in stm32f4xx_it.c i nthe interrupt.
+
+
+
+
+
+
 
 
 
