@@ -1,6 +1,7 @@
 Hardware
 
 ![image](https://github.com/user-attachments/assets/cea0655e-7683-48be-b5c2-96d9c097034d)
+![image](https://github.com/user-attachments/assets/915cf96d-f381-4560-9495-160557e13bb0)
 
 ![image](https://github.com/user-attachments/assets/ce4469fe-b1db-429f-a48f-a878a1d803ef)
 ![image](https://github.com/user-attachments/assets/0909a491-ca2e-4023-896a-16d8b014632a)
@@ -42,6 +43,7 @@ These are simply 7805 and 7812 regulators with decoupling, nothing special with 
 POINTS interface:
 
 The 1k pullup resistor is the reason I have difference in delay for closing and opening of points.
+3.3V is fed back from the mcu which has a 3.3v output to the 10k resistor R9 (red wire on pin16 of cn7) 
 ![image](https://github.com/user-attachments/assets/1a0a98ae-d4c2-481f-9e5d-3b58170fc05f)
 the file Tina-TI simulation file is included in github
 
