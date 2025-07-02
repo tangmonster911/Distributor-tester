@@ -1,7 +1,7 @@
 Hardware
 
 ![image](https://github.com/user-attachments/assets/cea0655e-7683-48be-b5c2-96d9c097034d)
-![image](https://github.com/user-attachments/assets/915cf96d-f381-4560-9495-160557e13bb0)
+
 
 ![image](https://github.com/user-attachments/assets/ce4469fe-b1db-429f-a48f-a878a1d803ef)
 ![image](https://github.com/user-attachments/assets/0909a491-ca2e-4023-896a-16d8b014632a)
@@ -10,7 +10,7 @@ Hardware
 
 I used stm32f411 nucleo board and a character lcd:
 ![image](https://github.com/user-attachments/assets/c65e0417-3a71-48db-bb72-a7c83f936e37)
-
+![image](https://github.com/user-attachments/assets/915cf96d-f381-4560-9495-160557e13bb0)
 ![image](https://github.com/user-attachments/assets/a7268f2f-a2d6-4b14-8484-b9bf71961566)
 
 for the points and proximity sensor interface i built a board that powers the proximity sensor and points with 12v and the mcu with 5V.
