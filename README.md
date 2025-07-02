@@ -44,7 +44,8 @@ These are simply 7805 and 7812 regulators with decoupling, nothing special with 
 
 POINTS interface:
 
-The 1k pullup resistor is the reason I have difference in delay for closing and opening of points.
+The 1k pullup resistor is the reason I have difference in delay for closing and opening of points. With lower resistance this time will be different for opening points and will be less.
+
 3.3V is fed back from the mcu which has a 3.3v output to the 10k resistor R9 (red wire on pin16 of cn7) 
 ![image](https://github.com/user-attachments/assets/1a0a98ae-d4c2-481f-9e5d-3b58170fc05f)
 the file Tina-TI simulation file is included in github
@@ -53,7 +54,7 @@ The micro seconds deduction needs to be updated for your specific hardware. This
 The Below image is the circuit diagram of one of the 2 schmitt triggers I built for the points interface to MCU.
 
 The below two images whos the two measured delays by using two oscilloscope probes measuring the voltage on points itself and voltage at MCU GPIO.
-The input low pass filter with 1nF start having effect at 1k. For 4 piston 6000 rpm of engine means 3000rpm of distributor with 4 pulses per rotation so that is 50hz x 4 = 200hz ( for v8 this will be 400hz) so current 1nF seems good but this could possibly be lowered to 470pf.
+The input low pass filter with 1nF and 180k start having larger effect at 1khz. For 4 piston 6000 rpm of engine means 3000rpm of distributor with 4 pulses per rotation so that is 50hz x 4 = 200hz ( for v8 this will be 400hz) so current 1nF seems good but this could possibly be lowered to 470pf.
 
 1)points closing(12v goes from high to low) (19us delay)
 
