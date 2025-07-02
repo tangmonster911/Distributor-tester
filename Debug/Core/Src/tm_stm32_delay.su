@@ -1,0 +1,12 @@
+../Core/Src/tm_stm32_delay.c:41:10:TM_DELAY_Init	0	static,ignoring_inline_asm
+../Core/Src/tm_stm32_delay.c:71:19:TM_DELAY_TimerCreate	24	static
+../Core/Src/tm_stm32_delay.c:102:6:TM_DELAY_TimerDelete	8	static,ignoring_inline_asm
+../Core/Src/tm_stm32_delay.c:146:19:TM_DELAY_TimerStop	0	static
+../Core/Src/tm_stm32_delay.c:154:19:TM_DELAY_TimerStart	0	static
+../Core/Src/tm_stm32_delay.c:162:19:TM_DELAY_TimerReset	0	static
+../Core/Src/tm_stm32_delay.c:170:19:TM_DELAY_TimerAutoReloadCommand	0	static
+../Core/Src/tm_stm32_delay.c:178:19:TM_DELAY_TimerAutoReloadValue	0	static
+../Core/Src/tm_stm32_delay.c:187:13:TM_DELAY_1msHandler	0	static
+../Core/Src/tm_stm32_delay.c:198:6:HAL_IncTick	16	static
+../Core/Src/tm_stm32_delay.c:268:10:HAL_GetTick	0	static
+../Core/Src/tm_stm32_delay.c:243:6:HAL_Delay	16	static,ignoring_inline_asm
