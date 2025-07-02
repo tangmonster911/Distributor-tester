@@ -23,7 +23,9 @@ For the distributor driver i used a large 12V dc motor i sourced from an electro
 ![image](https://github.com/user-attachments/assets/e83b3b0c-8bdf-45b2-a924-4913151f5804)
 
 ![image](https://github.com/user-attachments/assets/13d6d6a0-b40e-453e-b0b2-c9b42efe25d5)
+
 This is the motor part number and spec: RS-775SH-6822-95-HAM
+
 
 PCB for interfacing and power:
 
